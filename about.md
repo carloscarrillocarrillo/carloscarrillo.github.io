@@ -9,4 +9,4 @@ You can find the source code of this theme at <a href="https://github.com/SupunK
 
 (Change this by editing `about.md` file)
 
-Version 0.0.1
+Version: {{ site.version }}

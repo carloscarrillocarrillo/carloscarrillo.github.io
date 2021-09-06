@@ -18,6 +18,12 @@ $content-color: #272726;
 $on-mobile:        600px !default;
 $on-laptop:        800px !default;
 
+// Custom 
+$header-height: 3rem;
+$hue-color: 250;
+
+$first-color: hsl($hue-color, 69%, 61%);
+$body-color:  hsl($hue-color, 60%, 99%);
 
 // mixins
 @mixin relative-font-size($ratio) {

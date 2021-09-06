@@ -14,3 +14,5 @@ if(navClose){
         navMenu.classList.remove('show-menu')
     })
 }
+
+console.log("version 1.0.0")

@@ -1,4 +1,4 @@
-title: Leaf Blog
+title: Carlos Carrillo
 iconURL: assets/default-icon.png
 theme: jekyll-theme-slate
 
@@ -17,4 +17,4 @@ plugins:
 hyvor_talk_website_id: 14
 google_analytics: G-HHD26DKNNH
 
-version: 0.0.1
+version: 0.0.2

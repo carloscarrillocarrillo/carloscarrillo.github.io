@@ -73,7 +73,7 @@
 }
 
 .home__scroll {
-    color: $first-color;
+    display: none;
 }
 
 .home__scroll-button {
@@ -98,4 +98,28 @@
 
 .home__scroll-arrow{
     font-size: 1.25rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: $first-color;
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: $font-medium;
+}
+
+.button:hover {
+    background-color: $first-color-alt;
+}
+
+.button__icon{
+    font-size: 1.25rem;
+    margin-left: $mb-0-5;
+    transition: .3s;
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
 }

@@ -3,7 +3,23 @@ layout: default
 ---
 
 <div class="home">
-
+  <section class="home section" id="home">
+    <div class="home__container container grid">
+      <div class="home__content grid">
+        <div class="home__social">
+          <a href="https://www.linkedin.com" class="home__social-icon">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a href="https://www.dribbble.com" class="home__social-icon">
+            <i class="uil uil-dribbble"></i>
+          </a>
+          <a href="https://www.github.com" class="home__social-icon">
+            <i class="uil uil-github-alt"></i> 
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
   {{ content }}
 
   {% assign posts = site.posts %}

@@ -4,10 +4,7 @@ const   navMenu = document.getElementById('nav-menu'),
         navClose = document.getElementById('nav-close')
 
 if(navToggle) {
-    console.log(navToggle)
-
     navToggle.addEventListener('click', () => {
-        console.log('click toggle')
         navMenu.classList.add('show-menu')
     })
 }

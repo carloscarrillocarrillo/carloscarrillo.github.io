@@ -172,3 +172,20 @@
 .nav__toggle:hover {
   color: var(--first-color)
 }
+
+.nav__icon {
+  font-size: 1.2rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav__close:hover {
+  color: var(--first-color-alt)
+}

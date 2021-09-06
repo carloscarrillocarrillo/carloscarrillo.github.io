@@ -190,6 +190,10 @@
   color: var(--first-color-alt)
 }
 
+.show-menu {
+  bottom: 0;
+}
+
 @media screen and (max-width: 767px){
   .nav__menu {
     position: fixed;
@@ -204,3 +208,5 @@
   }
   
 }
+
+

@@ -18,6 +18,7 @@ $content-color: #272726;
 $on-mobile:        600px !default;
 $on-laptop:        800px !default;
 
+
 // mixins
 @mixin relative-font-size($ratio) {
 	font-size: #{$ratio}rem;

@@ -142,13 +142,13 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  z-index: $z-fixed;
+  background-color: $body-color;
 }
 
 .nav{
   max-width: 968px;
-  height: var(--header-height);
+  height: $header-height;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,12 +156,12 @@
 
 .nav__logo,
 .nav__toggle{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+  color: $title-color;
+  font-weight: $font-medium;
 }
 
 .nav__logo:hover{
-  color: var(--first-color)
+  color: $first-color
 }
 
 .nav__toggle {
@@ -170,7 +170,7 @@
 }
 
 .nav__toggle:hover {
-  color: var(--first-color)
+  color: $first-color
 }
 
 .nav__icon {
@@ -183,11 +183,11 @@
   bottom: .5rem;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--first-color);
+  color: $first-color;
 }
 
 .nav__close:hover {
-  color: var(--first-color-alt)
+  color: $first-color-alt
 }
 
 .show-menu {

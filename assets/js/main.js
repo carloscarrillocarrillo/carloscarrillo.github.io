@@ -91,7 +91,7 @@ modalCloses.forEach((modalClose) => {
 
 /* swiper */
 
-let swiper = new Swiper('."portfolio__container', {
+let swiper = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
     navigation: {

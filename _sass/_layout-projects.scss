@@ -1,0 +1,36 @@
+.project {
+    text-align: center;
+}
+
+.project__bg{
+    background-color: $first-color-second;
+    padding-top: 3rem;
+}
+
+.project__title{
+    font-size: $h2-font-size;
+    margin-bottom: $mb-0-75;
+}
+
+.project__description{
+    margin-bottom: $mb-1-5;
+}
+
+.project__title,
+.project__description {
+    color: #fff;
+}
+
+.project__img{
+    width: 232px;
+    justify-self: center;
+}
+
+.buttom--white{
+    background-color: #fff;
+    color: $first-color;
+}
+
+.buttom--white:hover{
+    background-color: #eee;
+}

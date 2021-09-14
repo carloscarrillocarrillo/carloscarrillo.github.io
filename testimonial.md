@@ -1,4 +1,4 @@
 ---
-title: Projects
-layout: projects
+title: Testimonial
+layout: testimonial
 ---

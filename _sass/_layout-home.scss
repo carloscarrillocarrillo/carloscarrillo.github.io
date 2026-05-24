@@ -50,7 +50,8 @@
 }
 
 .home__blob-img {
-    width: 170px;
+    width: 100%;
+    height: 100%;
 }
 
 .home__data {
@@ -112,9 +113,6 @@
         width: 270px;
     }
 
-    .home__blob-img {
-        width: 230px;
-    }
 
     .home__data {
         grid-column: initial;

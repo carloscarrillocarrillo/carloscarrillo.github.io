@@ -64,30 +64,38 @@
     background-color: $first-color;
 }
 
-.skills__html {
-    width: 90%;
-}
-.skills__css {
-    width: 80%;
-}
-.skills__js {
-    width: 75%;
-}
-.skills__react {
-    width: 70%;
-}
-.skills__cs {
-    width: 95%;
-}
-.skills__node {
-    width: 80%;
-}
-.skills__firebase {
-    width: 60%;
-}
-.skills__python {
-    width: 70%;
-}
+// Frontend
+.skills__html        { width: 90%; }
+.skills__css         { width: 80%; }
+.skills__js          { width: 75%; }
+.skills__react       { width: 70%; }
+
+// Backend
+.skills__cs          { width: 95%; }
+.skills__node        { width: 80%; }
+.skills__python      { width: 70%; }
+.skills__firebase    { width: 60%; }
+
+// Arquitectura & Microservicios
+.skills__microservices { width: 92%; }
+.skills__docker        { width: 85%; }
+.skills__k8s           { width: 78%; }
+.skills__events        { width: 82%; }
+.skills__api           { width: 90%; }
+
+// Cloud & AWS
+.skills__aws           { width: 85%; }
+.skills__serverless    { width: 80%; }
+.skills__cicd          { width: 82%; }
+.skills__azure         { width: 65%; }
+.skills__terraform     { width: 72%; }
+
+// Bases de Datos
+.skills__sql           { width: 92%; }
+.skills__mongo         { width: 80%; }
+.skills__redis         { width: 80%; }
+.skills__elastic       { width: 70%; }
+.skills__dynamo        { width: 75%; }
 
 .skills__close .skills__list{
     height: 0;

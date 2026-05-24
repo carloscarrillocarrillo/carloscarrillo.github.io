@@ -1,3 +1,22 @@
+/* Theme toggle — dark is default */
+const themeButton = document.getElementById('theme-button');
+
+function applyTheme(isLight) {
+    document.body.classList.toggle('light-theme', isLight);
+    themeButton.classList.toggle('uil-sun', !isLight);
+    themeButton.classList.toggle('uil-moon', isLight);
+}
+
+// Restore saved preference (default: dark)
+const savedTheme = localStorage.getItem('theme');
+applyTheme(savedTheme === 'light');
+
+themeButton.addEventListener('click', () => {
+    const isLight = !document.body.classList.contains('light-theme');
+    applyTheme(isLight);
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 /* Show and hide menu */
 const   navMenu = document.getElementById('nav-menu'),
         navToggle = document.getElementById('nav-toggle'),
@@ -88,6 +107,37 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
+
+/* Scroll reveal — Intersection Observer */
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('[data-reveal], [data-reveal-group]').forEach(el => {
+    revealObserver.observe(el);
+});
+
+/* Active nav link on scroll (scrollspy) */
+const sections = document.querySelectorAll('section[id]');
+
+const scrollspy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelectorAll('.nav__link').forEach(link => {
+                link.classList.remove('nav__link--active');
+                if (link.getAttribute('href') === '#' + entry.target.id) {
+                    link.classList.add('nav__link--active');
+                }
+            });
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(s => scrollspy.observe(s));
 
 /* swiper */
 

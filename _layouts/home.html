@@ -2,49 +2,476 @@
 layout: default
 ---
 
-<div class="home">
-  <section class="home section" id="home">
-    <div class="home__container container grid">
-      <div class="home__content grid">
-        <div class="home__social">
-          <a href="https://www.linkedin.com/in/carlos-carrillo-bb8220185/" target="_blank" class="home__social-icon">
-            <i class="uil uil-linkedin-alt"></i>
-          </a>
-          <a href="https://github.com/carloscarrillocarrillo" target="_blank" class="home__social-icon">
-            <i class="uil uil-github-alt"></i>
-          </a>
-        </div>
-        <div class="home_img">
-          <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
-            <mask id="mask0" mask-type="alpha">             
-             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-            </mask>
-            <g mask="url(#mask0)">
-              <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-              <image class="home__blob-img" x='12' y='18' xlink:href="{{ site.baseurl }}{% link assets/img/perfil.jpg %}" />
-            </g>
-           </svg>
-        </div>
-        
-        <div class="home__data">
-          <h1 class="home__title">Hola, soy Carlos Carrillo</h1>
-          <h3 class="home__subtitle">CTO & Arquitecto de Software</h3>
-          <p class="home__description">Más de 20 años desarrollando software, implementando sistemas distribuidos y dirigiendo equipos técnicos bajo arquitecturas en la nube.</p>
-          <a href="contact" class="button button--flex">
-            Contactame<i class="uil uil-message button__icon"></i>
-          </a>
-        </div>
+<!-- ===== HOME ===== -->
+<section class="home section" id="home">
+  <div class="home__container container grid">
+    <div class="home__content grid">
+      <div class="home__social">
+        <a href="https://www.linkedin.com/in/carlos-carrillo-bb8220185/" target="_blank" class="home__social-icon">
+          <i class="uil uil-linkedin-alt"></i>
+        </a>
+        <a href="https://github.com/carloscarrillocarrillo" target="_blank" class="home__social-icon">
+          <i class="uil uil-github-alt"></i>
+        </a>
+      </div>
+      <div class="home_img">
+        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0" mask-type="alpha">
+            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+          </mask>
+          <g mask="url(#mask0)">
+            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+            <image class="home__blob-img" x='12' y='18' xlink:href="{{ site.baseurl }}{% link assets/img/perfil.jpg %}" />
+          </g>
+        </svg>
+      </div>
+      <div class="home__data">
+        <h1 class="home__title">Hola, soy Carlos Carrillo</h1>
+        <h3 class="home__subtitle">CTO & Arquitecto de Software</h3>
+        <p class="home__description">Más de 20 años desarrollando software, implementando sistemas distribuidos y dirigiendo equipos técnicos bajo arquitecturas en la nube.</p>
+        <a href="#contact" class="button button--flex">
+          Contactame<i class="uil uil-message button__icon"></i>
+        </a>
+      </div>
+      <div class="home__scroll">
+        <a href="#about" class="home__scroll-button button-flex">
+          <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+          <span class="home__scroll-name">Scroll down</span>
+          <i class="uil uil-arrow-down home__scroll-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="home__scroll">
-          <a href="about" class="home__scroll-button button-flex">
-            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-            <span class="home__scroll-name">Scroll down</span>
-            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-          </a>
+<!-- ===== ABOUT ===== -->
+<section class="about section" id="about">
+  <h2 class="section__title" data-reveal="fade-down">About me</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">Quien soy</span>
+  <div class="about__container container grid">
+    <img src="{{ site.baseurl }}/assets/img/perfil.jpg" alt="Carlos Carrillo" class="about__img" data-reveal="from-left"/>
+    <div class="about__data" data-reveal="from-right">
+      <p class="about__description">
+        Ingeniero con más de 20 años desarrollando software e implementando sistemas distribuidos. Dirijo equipos técnicos bajo arquitecturas en la nube, aplicando atributos de calidad y patrones de diseño para construir sistemas de alta concurrencia y alto rendimiento.
+      </p>
+      <div class="about__info">
+        <div>
+          <span class="about__info-title">20+</span>
+          <span class="about__into-name">Years <br> experience</span>
+        </div>
+        <div>
+          <span class="about__info-title">20+</span>
+          <span class="about__into-name">completed <br> projects</span>
+        </div>
+        <div>
+          <span class="about__info-title">05+</span>
+          <span class="about__into-name">Companies <br> worked</span>
+        </div>
+      </div>
+      <div class="about__buttons">
+        <a download="" href="{{ site.baseurl }}/assets/pdf/carloscarrillo.pdf" class="button button--flex">
+          DOWNLOAD CV<i class="uil uil-download-alt button__icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills section" id="skills">
+  <h2 class="section__title" data-reveal="fade-down">Skills</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">My technical level</span>
+  <div class="skills__container container grid" data-reveal-group>
+    <div>
+      <div class="skills__content skills__open">
+        <div class="skills__header">
+          <i class="uil uil-brackets-curly skills__icon"></i>
+          <div>
+            <h1 class="skills__title">Frontend Developer</h1>
+            <span class="skills__subtitle">Más de 10 años</span>
+          </div>
+          <i class="uil uil-angle-down skills__arrow"></i>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">HTML</h3>
+              <span class="skills__number">90%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__html"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">CSS</h3>
+              <span class="skills__number">80%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__css"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Javascript</h3>
+              <span class="skills__number">75%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__js"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">React</h3>
+              <span class="skills__number">70%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__react"></span></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  {{ content }}
+    <div>
+      <div class="skills__content skills__close">
+        <div class="skills__header">
+          <i class="uil uil-server-network skills__icon"></i>
+          <div>
+            <h1 class="skills__title">Backend Developer</h1>
+            <span class="skills__subtitle">Más de 20 años</span>
+          </div>
+          <i class="uil uil-angle-down skills__arrow"></i>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">C#</h3>
+              <span class="skills__number">95%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__cs"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Node.js</h3>
+              <span class="skills__number">80%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__node"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Python</h3>
+              <span class="skills__number">70%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__python"></span></div>
+          </div>
+        </div>
+        <div class="skills__list grid">
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name">Firebase</h3>
+              <span class="skills__number">60%</span>
+            </div>
+            <div class="skills__bar"><span class="skills__percentage skills__firebase"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- ===== QUALIFICATION ===== -->
+<section class="qualification section" id="qualification">
+  <h2 class="section__title" data-reveal="fade-down">Qualification</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">My personal journey</span>
+  <div class="qualification__container container">
+    <div class="qualification__tabs" data-reveal="fade-up">
+      <div class="qualification__button button--flex qualification__active" data-target='#education'>
+        <i class="uil uil-graduation-cap qualification__icon"></i>
+        Education
+      </div>
+      <div class="qualification__button button--flex" data-target="#work">
+        <i class="uil uil-briefcase-alt qualification__icon"></i>
+        Work
+      </div>
+    </div>
+    <div class="qualification__sections" data-reveal="fade-up" data-reveal-delay="150">
+      <div class="qualification__content qualification__active" data-content id="education">
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Ingeniero Mecatrónico</h3>
+            <span class="qualification__subtitle">UTP - Colombia</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2005 - 2010</div>
+          </div>
+          <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+        </div>
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Tecnólogo Mecatrónico</h3>
+            <span class="qualification__subtitle">UTP - Colombia</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2005 - 2008</div>
+          </div>
+          <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+        </div>
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Técnico Mecatrónico</h3>
+            <span class="qualification__subtitle">UTP - Colombia</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2005 - 2007</div>
+          </div>
+          <div><span class="qualification__rounder"></span></div>
+        </div>
+      </div>
+      <div class="qualification__content" data-content id="work">
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">CTO</h3>
+            <span class="qualification__subtitle">ControlT</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2018 - Presente</div>
+          </div>
+          <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+        </div>
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Arquitecto de Software</h3>
+            <span class="qualification__subtitle">A&amp;A Solutions</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2014 - 2018</div>
+          </div>
+          <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+        </div>
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Ingeniero de Software Senior</h3>
+            <span class="qualification__subtitle">Total Report</span>
+            <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i> 2010 - 2014</div>
+          </div>
+          <div><span class="qualification__rounder"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services section" id="services">
+  <h2 class="section__title" data-reveal="fade-down">Services</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">What I offer</span>
+  <div class="services__container container grid" data-reveal-group>
+    <div class="services__content">
+      <div>
+        <i class="uil uil-layer-group services__icon"></i>
+        <h3 class="services__title">Arquitectura <br>de Software</h3>
+      </div>
+      <span class="button button--flex button--small buttom--link services__button">
+        Ver más <i class="uil uil-arrow-right button__icon"></i>
+      </span>
+      <div class="services__modal">
+        <div class="services__modal-content">
+          <h4 class="services__modal-title">Arquitectura <br>de Software</h4>
+          <i class="uil uil-times services__modal-close"></i>
+          <ul class="services__modal-services grid">
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Diseño de sistemas distribuidos y microservicios.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Arquitecturas en la nube (AWS, Azure, GCP).</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Definición de atributos de calidad y patrones de diseño.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Sistemas de alta concurrencia y alto rendimiento.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="services__content">
+      <div>
+        <i class="uil uil-server-network services__icon"></i>
+        <h3 class="services__title">Desarrollo <br>Backend</h3>
+      </div>
+      <span class="button button--flex button--small buttom--link services__button">
+        Ver más <i class="uil uil-arrow-right button__icon"></i>
+      </span>
+      <div class="services__modal">
+        <div class="services__modal-content">
+          <h4 class="services__modal-title">Desarrollo <br>Backend</h4>
+          <i class="uil uil-times services__modal-close"></i>
+          <ul class="services__modal-services grid">
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>APIs REST y GraphQL con C# y Node.js.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Integración con bases de datos SQL y NoSQL.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Implementación de patrones CQRS, Event Sourcing y DDD.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Optimización de rendimiento y escalabilidad.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="services__content">
+      <div>
+        <i class="uil uil-users-alt services__icon"></i>
+        <h3 class="services__title">Liderazgo <br>Técnico</h3>
+      </div>
+      <span class="button button--flex button--small buttom--link services__button">
+        Ver más <i class="uil uil-arrow-right button__icon"></i>
+      </span>
+      <div class="services__modal">
+        <div class="services__modal-content">
+          <h4 class="services__modal-title">Liderazgo <br>Técnico</h4>
+          <i class="uil uil-times services__modal-close"></i>
+          <ul class="services__modal-services grid">
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Dirección y mentoría de equipos de desarrollo.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Consultoría tecnológica y definición de roadmap.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>Implementación de buenas prácticas y cultura DevOps.</p></li>
+            <li class="services__modal-services"><i class="uil uil-check-circle services__modal-icon"></i><p>CTO as a Service para startups y empresas en crecimiento.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="portfolio section" id="portfolio">
+  <h2 class="section__title" data-reveal="fade-down">Portfolio</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">Most recent work</span>
+  <div class="portfolio__container container swiper-container" data-reveal="fade-up">
+    <div class="swiper-wrapper">
+      <div class="portfolio__content grid swiper-slide">
+        <img src="{{ site.baseurl }}/assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Modern website</h3>
+          <p class="portfolio__description">Website adaptable to all devices, with ui components and animated interactions</p>
+          <a href="#" class="button button--flex button--small portfolio__button">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+        </div>
+      </div>
+      <div class="portfolio__content grid swiper-slide">
+        <img src="{{ site.baseurl }}/assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Brand Design</h3>
+          <p class="portfolio__description">Website adaptable to all devices, with ui components and animated interactions</p>
+          <a href="#" class="button button--flex button--small portfolio__button">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+        </div>
+      </div>
+      <div class="portfolio__content grid swiper-slide">
+        <img src="{{ site.baseurl }}/assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Online store</h3>
+          <p class="portfolio__description">Website adaptable to all devices, with ui components and animated interactions</p>
+          <a href="#" class="button button--flex button--small portfolio__button">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+    <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section class="testimonial__section section" id="testimonial">
+  <h2 class="section__title" data-reveal="fade-down">Testimonial</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">My client saying</span>
+  <div class="testimonial__container container swiper-container" data-reveal="fade-up">
+    <div class="swiper-wrapper">
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+            <img src="{{ site.baseurl }}/assets/img/testimonial1.jpg" alt="" class="testimonial__img">
+            <div><h3 class="testimonial__name">Sara Smith</h3><span class="testimonial__client">Client</span></div>
+          </div>
+          <div>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+          </div>
+        </div>
+        <p class="testimonial__description">Excelente trabajo, los sistemas implementados mejoraron enormemente el rendimiento de nuestra plataforma.</p>
+      </div>
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+            <img src="{{ site.baseurl }}/assets/img/testimonial2.jpg" alt="" class="testimonial__img">
+            <div><h3 class="testimonial__name">Matt Robinson</h3><span class="testimonial__client">Client</span></div>
+          </div>
+          <div>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+          </div>
+        </div>
+        <p class="testimonial__description">Gran liderazgo técnico, el equipo avanzó de forma notable gracias a su dirección y mentoría.</p>
+      </div>
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+            <img src="{{ site.baseurl }}/assets/img/testimonial3.jpg" alt="" class="testimonial__img">
+            <div><h3 class="testimonial__name">Raúl Harris</h3><span class="testimonial__client">Client</span></div>
+          </div>
+          <div>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+            <i class="uil uil-star testimonial__icon-star"></i>
+          </div>
+        </div>
+        <p class="testimonial__description">Arquitectura sólida y entrega puntual. Recomiendo ampliamente sus servicios de consultoría.</p>
+      </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact section" id="contact">
+  <h2 class="section__title" data-reveal="fade-down">Contact Me</h2>
+  <span class="section__subtitle" data-reveal="fade-down" data-reveal-delay="100">Get in touch</span>
+  <div class="contact__container container grid">
+    <div class="contact__info-col" data-reveal="from-left">
+      <div class="contact__information">
+        <i class="uil uil-envelope contact__icon"></i>
+        <div>
+          <h3 class="contact__title">Email</h3>
+          <span class="contact__subtitle">carlos.carrillo.carrillo@hotmail.com</span>
+        </div>
+      </div>
+      <div class="contact__information">
+        <i class="uil uil-linkedin-alt contact__icon"></i>
+        <div>
+          <h3 class="contact__title">LinkedIn</h3>
+          <span class="contact__subtitle">carlos-carrillo-bb8220185</span>
+        </div>
+      </div>
+      <div class="contact__information">
+        <i class="uil uil-map-marker contact__icon"></i>
+        <div>
+          <h3 class="contact__title">Location</h3>
+          <span class="contact__subtitle">Colombia - Pereira</span>
+        </div>
+      </div>
+    </div>
+    <form action="" class="contact__form grid" data-reveal="from-right">
+      <div class="contact__inputs grid">
+        <div class="contact__content">
+          <label for="" class="contact__label">Name</label>
+          <input type="text" class="contact__input">
+        </div>
+        <div class="contact__content">
+          <label for="" class="contact__label">Email</label>
+          <input type="email" class="contact__input">
+        </div>
+      </div>
+      <div class="contact__content">
+        <label for="" class="contact__label">Project</label>
+        <input type="text" class="contact__input">
+      </div>
+      <div class="contact__content">
+        <label for="" class="contact__label">Message</label>
+        <textarea name="text" cols="0" rows="7" class="contact__input"></textarea>
+      </div>
+      <div>
+        <a href="" class="button button--flex">
+          Send Message <i class="uil uil-message button__icon"></i>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>

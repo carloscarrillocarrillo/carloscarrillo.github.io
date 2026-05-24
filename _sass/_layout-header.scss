@@ -170,7 +170,24 @@
 }
 
 .nav__toggle:hover {
-  color: $first-color
+  color: $first-color;
+}
+
+.nav__theme-toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: $title-color;
+  margin-right: .5rem;
+  transition: color .3s;
+}
+
+.nav__theme-toggle:hover {
+  color: $first-color;
+}
+
+.nav__btns {
+  display: flex;
+  align-items: center;
 }
 
 .nav__list {
@@ -186,7 +203,8 @@
   color: $title-color;
   font-weight: $font-medium;
 }
-.nav__link:hover{
+.nav__link:hover,
+.nav__link--active {
   color: $first-color;
 }
 

@@ -1,0 +1,63 @@
+// ===== SCROLL REVEAL ANIMATIONS =====
+
+[data-reveal],
+[data-reveal-group] > * {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+// Default: fade up
+[data-reveal],
+[data-reveal-group] > * {
+    transform: translateY(40px);
+}
+
+[data-reveal="fade-down"] {
+    transform: translateY(-30px);
+}
+
+[data-reveal="from-left"] {
+    transform: translateX(-50px);
+}
+
+[data-reveal="from-right"] {
+    transform: translateX(50px);
+}
+
+// Visible state
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+// Group stagger
+[data-reveal-group].is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@for $i from 1 through 6 {
+    [data-reveal-group].is-visible > *:nth-child(#{$i}) {
+        transition-delay: #{($i - 1) * 0.12}s;
+    }
+}
+
+// Delay variants via data attribute
+[data-reveal-delay="100"]  { transition-delay: 0.1s; }
+[data-reveal-delay="150"]  { transition-delay: 0.15s; }
+[data-reveal-delay="200"]  { transition-delay: 0.2s; }
+[data-reveal-delay="300"]  { transition-delay: 0.3s; }
+
+// Preserve delay after becoming visible
+[data-reveal].is-visible[data-reveal-delay="100"]  { transition-delay: 0.1s; }
+[data-reveal].is-visible[data-reveal-delay="150"]  { transition-delay: 0.15s; }
+[data-reveal].is-visible[data-reveal-delay="200"]  { transition-delay: 0.2s; }
+[data-reveal].is-visible[data-reveal-delay="300"]  { transition-delay: 0.3s; }
+
+// Don't animate elements inside active modals
+.active-modal [data-reveal],
+.active-modal [data-reveal-group] > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}

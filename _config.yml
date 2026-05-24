@@ -1,13 +1,12 @@
 title: Carlos Carrillo
 iconURL: assets/default-icon.png
-theme: jekyll-theme-slate
 
 # for a clean URL
 permalink: :slug
 
 social:
-  twitter: _SupunKavinda
-  github: SupunKavinda
+  linkedin: carlos-carrillo-bb8220185
+  github: carloscarrillocarrillo
 
 plugins:
  - jekyll-feed

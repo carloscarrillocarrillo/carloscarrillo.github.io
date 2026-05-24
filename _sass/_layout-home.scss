@@ -96,8 +96,45 @@
     margin-right: $mb-0-25; 
 }
 
-.home__scroll-arrow{
+.home__scroll-arrow {
     font-size: 1.25rem;
+}
+
+// ===== DESKTOP HOME =====
+@media screen and (min-width: 768px) {
+    .home__content {
+        grid-template-columns: max-content 1fr 1fr;
+        padding-top: 5.5rem;
+        column-gap: 2rem;
+    }
+
+    .home__blob {
+        width: 270px;
+    }
+
+    .home__blob-img {
+        width: 230px;
+    }
+
+    .home__data {
+        grid-column: initial;
+    }
+
+    .home__social {
+        margin-top: 1rem;
+    }
+
+    .home_img {
+        order: 1;
+    }
+
+    .home__scroll {
+        display: block;
+    }
+
+    .home__title {
+        font-size: $big-font-size;
+    }
 }
 
 .button {

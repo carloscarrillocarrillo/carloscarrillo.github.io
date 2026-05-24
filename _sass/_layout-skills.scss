@@ -99,6 +99,14 @@
     margin-bottom: $mb-2-5;
 }
 
-.skills__open .skills__arrow{
+.skills__open .skills__arrow {
     transform: rotate(-180deg);
+}
+
+// ===== DESKTOP SKILLS =====
+@media screen and (min-width: 768px) {
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+    }
 }

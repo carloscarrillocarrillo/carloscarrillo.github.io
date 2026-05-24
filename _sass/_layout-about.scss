@@ -36,3 +36,31 @@
     display: flex;
     justify-content: center;
 }
+
+// ===== DESKTOP ABOUT =====
+@media screen and (min-width: 768px) {
+    .about__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about__img {
+        width: 280px;
+        border-radius: .75rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .about__description {
+        text-align: initial;
+        margin-bottom: $mb-2;
+    }
+
+    .about__info {
+        justify-content: flex-start;
+        column-gap: 3rem;
+    }
+
+    .about__buttons {
+        justify-content: flex-start;
+    }
+}

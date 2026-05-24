@@ -109,3 +109,11 @@
     opacity: 1;
     visibility: visible;
 }
+
+// ===== DESKTOP SERVICES =====
+@media screen and (min-width: 768px) {
+    .services__container {
+        grid-template-columns: repeat(3, 218px);
+        justify-content: center;
+    }
+}

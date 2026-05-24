@@ -41,6 +41,20 @@
     color: $text-color-light;
 }
 
+.qualification__description {
+    margin-top: $mb-0-75;
+    padding-left: 1rem;
+    list-style: disc;
+    font-size: $smaller-font-size;
+    color: $text-color;
+    line-height: 1.6;
+    row-gap: .25rem;
+
+    li {
+        margin-bottom: .3rem;
+    }
+}
+
 .qualification__rounder{
     display: inline-block;
     width: 13px;

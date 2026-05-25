@@ -142,17 +142,15 @@ sections.forEach(s => scrollspy.observe(s));
 /* Contact form — AJAX submission via Formspree */
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('contact-form-status');
+const formFields = document.getElementById('contact-form-fields');
 
-if (contactForm && formStatus) {
+if (contactForm && formStatus && formFields) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // Clear previous status
         formStatus.className = 'contact__status';
         formStatus.textContent = '';
-
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
 
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -163,21 +161,21 @@ if (contactForm && formStatus) {
         try {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(contactForm)
             });
 
             if (response.ok) {
+                // Hide form fields and show success message
+                formFields.style.display = 'none';
                 formStatus.className = 'contact__status contact__status--success';
-                formStatus.textContent = 'Mensaje enviado con éxito. Te responderé pronto.';
-                contactForm.reset();
+                formStatus.innerHTML = '<i class="uil uil-check-circle contact__success-icon"></i><p>Mensaje enviado con éxito.<br>Te responderé pronto.</p>';
             } else {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
             formStatus.className = 'contact__status contact__status--error';
             formStatus.textContent = 'Algo salió mal. Inténtalo de nuevo o escríbeme directamente por email.';
-        } finally {
             submitBtn.innerHTML = originalHTML;
             submitBtn.disabled = false;
         }

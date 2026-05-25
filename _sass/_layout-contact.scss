@@ -51,21 +51,28 @@
 
 /* Form status messages */
 .contact__status {
-    padding: 0.75rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: .5rem;
-    font-size: $small-font-size;
+    font-size: $normal-font-size;
     display: none;
+    text-align: center;
 }
 
 .contact__status--success {
     display: block;
-    background-color: rgba(76, 175, 80, 0.15);
+    background-color: rgba(76, 175, 80, 0.12);
     color: #81c784;
+}
+
+.contact__success-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .contact__status--error {
     display: block;
-    background-color: rgba(244, 67, 54, 0.15);
+    background-color: rgba(244, 67, 54, 0.12);
     color: #e57373;
 }
 

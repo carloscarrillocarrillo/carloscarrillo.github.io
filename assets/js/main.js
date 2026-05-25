@@ -142,9 +142,8 @@ sections.forEach(s => scrollspy.observe(s));
 /* Contact form — AJAX submission via Formspree */
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('contact-form-status');
-const formFields = document.getElementById('contact-form-fields');
 
-if (contactForm && formStatus && formFields) {
+if (contactForm && formStatus) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -166,8 +165,12 @@ if (contactForm && formStatus && formFields) {
             });
 
             if (response.ok) {
-                // Hide form fields and show success message
-                formFields.style.display = 'none';
+                // Hide all form children except the status message
+                Array.from(contactForm.children).forEach(child => {
+                    if (child.id !== 'contact-form-status') {
+                        child.style.display = 'none';
+                    }
+                });
                 formStatus.className = 'contact__status contact__status--success';
                 formStatus.innerHTML = '<i class="uil uil-check-circle contact__success-icon"></i><p>Mensaje enviado con éxito.<br>Te responderé pronto.</p>';
             } else {

@@ -44,6 +44,31 @@
     outline: none;
 }
 
+.contact__input::placeholder {
+    color: $text-color-light;
+    opacity: 0.6;
+}
+
+/* Form status messages */
+.contact__status {
+    padding: 0.75rem 1rem;
+    border-radius: .5rem;
+    font-size: $small-font-size;
+    display: none;
+}
+
+.contact__status--success {
+    display: block;
+    background-color: rgba(76, 175, 80, 0.15);
+    color: #81c784;
+}
+
+.contact__status--error {
+    display: block;
+    background-color: rgba(244, 67, 54, 0.15);
+    color: #e57373;
+}
+
 // ===== DESKTOP CONTACT =====
 @media screen and (min-width: 768px) {
     .contact__container {

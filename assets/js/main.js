@@ -139,3 +139,47 @@ const scrollspy = new IntersectionObserver((entries) => {
 
 sections.forEach(s => scrollspy.observe(s));
 
+/* Contact form — AJAX submission via Formspree */
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('contact-form-status');
+
+if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Clear previous status
+        formStatus.className = 'contact__status';
+        formStatus.textContent = '';
+
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="uil uil-spinner-alt button__icon"></i> Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                formStatus.className = 'contact__status contact__status--success';
+                formStatus.textContent = 'Mensaje enviado con éxito. Te responderé pronto.';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            formStatus.className = 'contact__status contact__status--error';
+            formStatus.textContent = 'Algo salió mal. Inténtalo de nuevo o escríbeme directamente por email.';
+        } finally {
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+        }
+    });
+}

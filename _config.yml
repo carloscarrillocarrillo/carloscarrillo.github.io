@@ -16,4 +16,10 @@ plugins:
 hyvor_talk_website_id: 14
 google_analytics: G-HHD26DKNNH
 
+### contact form (Formspree)
+### 1. Create a free account at https://formspree.io
+### 2. Create a new form and copy its ID (e.g. "xqkyawnr")
+### 3. Replace YOUR_FORM_ID below with your real ID
+formspree_id: xaqkdgwp
+
 version: 0.0.2

@@ -1,5 +1,12 @@
-title: Carlos Carrillo
+title: Carlos Carrillo — CTO & Software Architect
+tagline: Liderazgo técnico y arquitectura de software
+description: >-
+  Carlos Carrillo · CTO & Arquitecto de Software con más de 20 años de experiencia.
+  Especialista en sistemas distribuidos, microservicios, cloud (AWS, Azure),
+  C#, Node.js, y liderazgo de equipos técnicos de alto rendimiento.
+url: https://carloscarrillo.github.io
 iconURL: assets/default-icon.png
+logo: /assets/img/perfil.jpg
 
 # for a clean URL
 permalink: :slug
@@ -7,6 +14,13 @@ permalink: :slug
 social:
   linkedin: carlos-carrillo-bb8220185
   github: carloscarrillocarrillo
+
+twitter:
+  username: carloscarrillo
+  card: summary_large_image
+
+author:
+  name: Carlos Carrillo
 
 plugins:
  - jekyll-feed
@@ -17,9 +31,6 @@ hyvor_talk_website_id: 14
 google_analytics: G-HHD26DKNNH
 
 ### contact form (Formspree)
-### 1. Create a free account at https://formspree.io
-### 2. Create a new form and copy its ID (e.g. "xqkyawnr")
-### 3. Replace YOUR_FORM_ID below with your real ID
 formspree_id: xaqkdgwp
 
 version: 0.0.2
